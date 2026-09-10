@@ -1,4 +1,4 @@
-﻿using EvolucionalControleMatriculas.Entities;
+﻿using EvolucionalControleMatriculas.Application.DTOs;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -6,7 +6,6 @@ namespace EvolucionalControleMatriculas.Application.Interfaces.Services
 {
     public interface ITurmaApplication
     {
-        Task<IReadOnlyCollection<Turma>> ListarAsync();
-
+        Task<IReadOnlyCollection<TurmaDto>> ListarAsync();
     }
 }

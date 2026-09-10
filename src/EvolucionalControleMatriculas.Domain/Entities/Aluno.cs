@@ -21,6 +21,13 @@ namespace EvolucionalControleMatriculas.Entities
             DataCadastro = DateTime.Now;
         }
 
+        public void Atualizar(string nome, string email, DateTime dataNascimento)
+        {
+            Nome = nome;
+            Email = email;
+            DataNascimento = dataNascimento;
+        }
+
         private Aluno()
         {
         }
