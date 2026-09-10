@@ -6,6 +6,6 @@ namespace EvolucionalControleMatriculas.Application.Interfaces
     public interface IMatriculaRepository
     {
         Task<bool> ExisteAsync(int alunoId, int turmaId);
-        Task MatricularAsync(Matricula matricula);
+        Task<bool> MatricularAsync(Matricula matricula);
     }
 }

@@ -46,9 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interfaces\IAlunoRepository.cs" />
-    <Compile Include="Interfaces\IMatriculaRepository.cs" />
-    <Compile Include="Interfaces\ITurmaRepository.cs" />
+    <Compile Include="DTOs\MatriculaDto.cs" />
+    <Compile Include="Interfaces\Repositories\IAlunoRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IMatriculaRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ITurmaRepository.cs" />
+    <Compile Include="Interfaces\Services\IAlunoApplication.cs" />
+    <Compile Include="Interfaces\Services\IMatriculaApplication.cs" />
+    <Compile Include="Interfaces\Services\ITurmaApplication.cs" />
+    <Compile Include="MatriculaApplication.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

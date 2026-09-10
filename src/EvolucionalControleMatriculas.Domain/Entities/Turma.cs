@@ -26,6 +26,10 @@ namespace EvolucionalControleMatriculas.Entities
             VagasDisponiveis = vagasDisponiveis;
         }
 
+        private Turma()
+        {
+        }
+
         public void InscreverAluno()
         {
             if (VagasDisponiveis < 1)

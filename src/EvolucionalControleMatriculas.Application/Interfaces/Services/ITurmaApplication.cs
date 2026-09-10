@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace EvolucionalControleMatriculas.Application.Interfaces
+namespace EvolucionalControleMatriculas.Application.Interfaces.Services
 {
-    public interface ITurmaRepository
+    public interface ITurmaApplication
     {
         Task<IReadOnlyCollection<Turma>> ListarAsync();
+
     }
 }
