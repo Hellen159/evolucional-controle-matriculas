@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D5652932-C5DA-4D61-8D83-A06A3A522C83}</ProjectGuid>
+    <ProjectGuid>{B18481B0-498E-49BF-9387-823D6BED3A98}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>EvolucionalControleMatriculas</RootNamespace>
-    <AssemblyName>EvolucionalControleMatriculas</AssemblyName>
+    <RootNamespace>EvolucionalControleMatriculas.Application</RootNamespace>
+    <AssemblyName>EvolucionalControleMatriculas.Application</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,12 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Aluno.cs" />
-    <Compile Include="Entities\Matricula.cs" />
-    <Compile Include="Entities\Turma.cs" />
-    <Compile Include="Enums\PeriodoTurma.cs" />
-    <Compile Include="Exceptions\DomainException.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
