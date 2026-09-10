@@ -75,7 +75,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Infrastructure\AlunoRepositoryTests.cs" />
+    <Compile Include="Domain\AlunoTests.cs" />
+    <Compile Include="Domain\MatriculaTests.cs" />
+    <Compile Include="Domain\TurmaTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
