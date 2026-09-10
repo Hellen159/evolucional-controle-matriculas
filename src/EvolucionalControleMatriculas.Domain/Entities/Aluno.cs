@@ -10,7 +10,7 @@ namespace EvolucionalControleMatriculas.Entities
         public DateTime DataNascimento { get; private set; }
         public bool Ativo { get; private set; }
 
-        public DateTime DataCadastro { get;private set; }
+        public DateTime DataCadastro { get; private set; }
 
         public Aluno(string nome, string email, DateTime dataNascimento)
         {
@@ -19,6 +19,10 @@ namespace EvolucionalControleMatriculas.Entities
             DataNascimento = dataNascimento;
             Ativo = true;
             DataCadastro = DateTime.Now;
+        }
+
+        private Aluno()
+        {
         }
     }
 }

@@ -13,11 +13,11 @@ namespace EvolucionalControleMatriculas.Entities
 
         public Turma(string nome, PeriodoTurma periodoTurma, int vagasTotais, int vagasDisponiveis)
         {
-            if(vagasTotais < 0)
+            if (vagasTotais < 0)
                 throw new DomainException($"O valor para vagas totais tem que ser maior que zero!");
-            if(vagasDisponiveis < 0)
+            if (vagasDisponiveis < 0)
                 throw new DomainException($"O valor para vagas disponiveis tem que ser maior que zero!");
-            if(vagasDisponiveis > vagasTotais)
+            if (vagasDisponiveis > vagasTotais)
                 throw new DomainException($"O valor para vagas disponiveis tem que ser menor que o valor de vagas totais!");
 
             Nome = nome;
