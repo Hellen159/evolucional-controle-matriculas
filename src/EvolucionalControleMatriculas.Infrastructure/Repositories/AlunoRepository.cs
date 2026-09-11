@@ -16,7 +16,7 @@ namespace EvolucionalControleMatriculas.Infrastructure.Repositories
             _connectionFactory = connectionFactory;
         }
 
-        public async Task AtualizarAsync(Aluno aluno)
+        public async Task<bool> AtualizarAsync(Aluno aluno)
         {
             using (var connection = _connectionFactory.CreateConnection())
             {
@@ -29,17 +29,19 @@ namespace EvolucionalControleMatriculas.Infrastructure.Repositories
                         DataNascimento = @DataNascimento
                     WHERE Id = @Id";
 
-                await connection.ExecuteAsync(sql, new
+                var linhasAfetadas = await connection.ExecuteAsync(sql, new
                 {
                     aluno.Id,
                     aluno.Nome,
                     aluno.Email,
                     aluno.DataNascimento
                 });
+
+                return linhasAfetadas > 0;
             }
         }
 
-        public async Task DesativarAsync(int id)
+        public async Task<bool> DesativarAsync(int id)
         {
             using (var connection = _connectionFactory.CreateConnection())
             {
@@ -50,7 +52,9 @@ namespace EvolucionalControleMatriculas.Infrastructure.Repositories
                     SET Ativo = 0
                     WHERE Id = @Id";
 
-                await connection.ExecuteAsync(sql, new { Id = id });
+                var linhasAfetadas = await connection.ExecuteAsync(sql, new { Id = id });
+
+                return linhasAfetadas > 0;
             }
         }
 

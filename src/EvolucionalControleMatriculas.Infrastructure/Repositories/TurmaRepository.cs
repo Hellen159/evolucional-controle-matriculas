@@ -27,7 +27,7 @@ namespace EvolucionalControleMatriculas.Infrastructure.Repositories
                         Id,
                         Nome,
                         Periodo,
-                        VagasTotais,
+                        VagasTotal,
                         VagasDisponiveis
                     FROM Turma
                     ORDER BY Id";
@@ -49,7 +49,7 @@ namespace EvolucionalControleMatriculas.Infrastructure.Repositories
                         Id,
                         Nome,
                         Periodo,
-                        VagasTotais,
+                        VagasTotal,
                         VagasDisponiveis
                     FROM Turma
                     WHERE Id = @Id";

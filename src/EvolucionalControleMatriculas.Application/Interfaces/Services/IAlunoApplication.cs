@@ -12,8 +12,8 @@ namespace EvolucionalControleMatriculas.Application.Interfaces.Services
 
         Task<int> CriarAsync(AlunoGravacaoDto dto);
 
-        Task AtualizarAsync(AlunoAtualizacaoDto dto);
+        Task<bool> AtualizarAsync(AlunoAtualizacaoDto dto);
 
-        Task DesativarAsync(int id);
+        Task<bool> DesativarAsync(int id);
     }
 }

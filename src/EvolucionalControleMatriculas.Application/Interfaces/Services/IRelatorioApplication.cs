@@ -1,11 +1,11 @@
 ﻿using EvolucionalControleMatriculas.Application.DTOs;
-using EvolucionalControleMatriculas.Application.Enums;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace EvolucionalControleMatriculas.Application.Interfaces.Services
 {
-    public interface IMatriculaApplication
+    public interface IRelatorioApplication
     {
-        Task<ResultadoMatricula> MatricularAsync(MatriculaDto dto);
+        Task<IReadOnlyCollection<AlunosPorTurmaDto>> ListarAlunosPorTurmaAsync();
     }
 }

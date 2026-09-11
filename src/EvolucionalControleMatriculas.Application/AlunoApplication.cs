@@ -18,19 +18,19 @@ namespace EvolucionalControleMatriculas.Application
             _repository = repository;
         }
 
-        public async Task AtualizarAsync(AlunoAtualizacaoDto dto)
+        public async Task<bool> AtualizarAsync(AlunoAtualizacaoDto dto)
         {
             var aluno = await _repository.ObterPorIdAsync(dto.Id);
 
             if (aluno == null)
-                return;
+                return false;
 
             aluno.Atualizar(
                 dto.Nome,
                 dto.Email,
                 dto.DataNascimento);
 
-            await _repository.AtualizarAsync(aluno);
+            return await _repository.AtualizarAsync(aluno);
         }
 
         public async Task<int> CriarAsync(AlunoGravacaoDto dto)
@@ -43,14 +43,9 @@ namespace EvolucionalControleMatriculas.Application
             return await _repository.InserirAsync(aluno);
         }
 
-        public async Task DesativarAsync(int id)
+        public async Task<bool> DesativarAsync(int id)
         {
-            var aluno = await _repository.ObterPorIdAsync(id);
-
-            if (aluno == null)
-                return;
-
-            await _repository.DesativarAsync(id);
+            return await _repository.DesativarAsync(id);
         }
 
         public async Task<(IReadOnlyCollection<AlunoDto> Itens, int Total)> ListarAsync(
@@ -73,6 +68,9 @@ namespace EvolucionalControleMatriculas.Application
         public async Task<AlunoDto> ObterPorIdAsync(int id)
         {
             var aluno = await _repository.ObterPorIdAsync(id);
+
+            if(aluno == null)
+                return null;
 
             return AlunoMapper.Mapear(aluno);
         }

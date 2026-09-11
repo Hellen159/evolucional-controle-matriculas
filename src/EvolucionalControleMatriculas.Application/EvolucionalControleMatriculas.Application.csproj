@@ -50,18 +50,23 @@
     <Compile Include="DTOs\AlunoAtualizacaoDto.cs" />
     <Compile Include="DTOs\AlunoDto.cs" />
     <Compile Include="DTOs\AlunoGravacaoDto.cs" />
+    <Compile Include="DTOs\AlunosPorTurmaDto.cs" />
     <Compile Include="DTOs\MatriculaDto.cs" />
     <Compile Include="DTOs\TurmaDto.cs" />
+    <Compile Include="Enums\ResultadoMatricula.cs" />
     <Compile Include="Interfaces\Repositories\IAlunoRepository.cs" />
     <Compile Include="Interfaces\Repositories\IMatriculaRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IRelatorioRepository.cs" />
     <Compile Include="Interfaces\Repositories\ITurmaRepository.cs" />
     <Compile Include="Interfaces\Services\IAlunoApplication.cs" />
     <Compile Include="Interfaces\Services\IMatriculaApplication.cs" />
+    <Compile Include="Interfaces\Services\IRelatorioApplication.cs" />
     <Compile Include="Interfaces\Services\ITurmaApplication.cs" />
     <Compile Include="Mappers\AlunoMapper.cs" />
     <Compile Include="Mappers\TurmaMapper.cs" />
     <Compile Include="MatriculaApplication.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RelatorioApplication.cs" />
     <Compile Include="TurmaApplication.cs" />
   </ItemGroup>
   <ItemGroup>
